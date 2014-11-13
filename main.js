@@ -1,0 +1,10 @@
+require('./main/Date.js');
+require('./main/RegExp.js');
+require('./main/Function.js');
+require('./main/Error.js');
+require('./main/EvalError.js');
+require('./main/RangeError.js');
+require('./main/ReferenceError.js');
+require('./main/SyntaxError.js');
+require('./main/TypeError.js');
+require('./main/URIError.js');

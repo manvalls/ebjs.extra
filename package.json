@@ -1,0 +1,21 @@
+{
+  "name": "ebjs.extra",
+  "version": "0.0.0",
+  "description": "Extra definitions for ebjs",
+  "main": "main.js",
+  "dependencies": {
+    "ebjs": ""
+  },
+  "devDependencies": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/manvalls/ebjs.extra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manvalls/ebjs.extra/issues"
+  },
+  "author": "Manuel Valls Fernández <manolo@chatiku.com>",
+  "license": "LGPL-3.0"
+}

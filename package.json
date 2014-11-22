@@ -1,14 +1,12 @@
 {
   "name": "ebjs.extra",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Extra definitions for ebjs",
   "main": "main.js",
   "dependencies": {
     "ebjs": ""
   },
-  "devDependencies": {
-    
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/manvalls/ebjs.extra.git"

@@ -8,8 +8,6 @@ No piece of software is ever completed, feel free to contribute and be humble.
 
 # ebjs extra
 
-Test this package online at http://manvalls.github.io/ebjs.extra
-
 This package provides ebjs definitions for:
 
 - [11\] Date

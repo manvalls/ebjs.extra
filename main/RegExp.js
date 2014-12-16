@@ -1,6 +1,6 @@
 var ebjs = require('ebjs');
 
-ebjs.define(RegExp,12,function*(buff,data){
+ebjs.define(RegExp,12,function*(data){
   
   var flags = 0;
   
@@ -10,15 +10,15 @@ ebjs.define(RegExp,12,function*(buff,data){
   if(data.sticky)     flags |= 8;
   if(data.unicode)    flags |= 16;
   
-  yield buff.pack(Number,flags);
-  yield buff.pack(String,data.source);
-  yield buff.pack(Number,data.lastIndex);
+  yield this.pack(Number,flags);
+  yield this.pack(String,data.source);
+  yield this.pack(Number,data.lastIndex);
   
-},function*(buff){
+},function*(){
   
   var re,flags = '',fn;
   
-  fn = yield buff.unpack(Number);
+  fn = yield this.unpack(Number);
   
   if(fn & 1)  flags += 'm';
   if(fn & 2)  flags += 'g';
@@ -26,8 +26,8 @@ ebjs.define(RegExp,12,function*(buff,data){
   if(fn & 8)  flags += 'y';
   if(fn & 16) flags += 'u';
   
-  re = new RegExp(yield buff.unpack(String),flags);
-  re.lastIndex = yield buff.unpack(Number);
+  re = new RegExp(yield this.unpack(String),flags);
+  re.lastIndex = yield this.unpack(Number);
   
   return re;
   

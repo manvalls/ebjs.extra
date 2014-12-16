@@ -1,11 +1,11 @@
 var ebjs = require('ebjs');
 
-ebjs.define(RangeError,16,function*(buff,data){
+ebjs.define(RangeError,16,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new RangeError(yield buff.unpack(String));
+  return new RangeError(yield this.unpack(String));
   
 });

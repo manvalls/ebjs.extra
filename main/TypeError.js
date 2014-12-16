@@ -1,11 +1,11 @@
 var ebjs = require('ebjs');
 
-ebjs.define(TypeError,19,function*(buff,data){
+ebjs.define(TypeError,19,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new TypeError(yield buff.unpack(String));
+  return new TypeError(yield this.unpack(String));
   
 });

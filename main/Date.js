@@ -1,12 +1,12 @@
 var ebjs = require('ebjs');
 
-ebjs.define(Date,11,function*(buff,data){
+ebjs.define(Date,11,function*(data){
   
-  yield buff.pack(Number,data.getTime());
+  yield this.pack(Number,data.getTime());
   
-},function*(buff){
+},function*(){
   
-  return new Date(yield buff.unpack(Number));
+  return new Date(yield this.unpack(Number));
   
 });
 

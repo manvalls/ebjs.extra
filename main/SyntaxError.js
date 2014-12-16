@@ -1,11 +1,11 @@
 var ebjs = require('ebjs');
 
-ebjs.define(SyntaxError,18,function*(buff,data){
+ebjs.define(SyntaxError,18,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new SyntaxError(yield buff.unpack(String));
+  return new SyntaxError(yield this.unpack(String));
   
 });

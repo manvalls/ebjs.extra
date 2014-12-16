@@ -1,11 +1,11 @@
 var ebjs = require('ebjs');
 
-ebjs.define(URIError,20,function*(buff,data){
+ebjs.define(URIError,20,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new URIError(yield buff.unpack(String));
+  return new URIError(yield this.unpack(String));
   
 });

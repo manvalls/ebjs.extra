@@ -1,12 +1,12 @@
 var ebjs = require('ebjs');
 
-ebjs.define(Error,14,function*(buff,data){
+ebjs.define(Error,14,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new Error(yield buff.unpack(String));
+  return new Error(yield this.unpack(String));
   
 });
 

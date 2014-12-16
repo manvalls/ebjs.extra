@@ -1,11 +1,11 @@
 var ebjs = require('ebjs');
 
-ebjs.define(ReferenceError,17,function*(buff,data){
+ebjs.define(ReferenceError,17,function*(data){
   
-  yield buff.pack(String,data.message);
+  yield this.pack(String,data.message);
   
-},function*(buff){
+},function*(){
   
-  return new ReferenceError(yield buff.unpack(String));
+  return new ReferenceError(yield this.unpack(String));
   
 });

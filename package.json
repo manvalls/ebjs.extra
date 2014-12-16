@@ -1,6 +1,6 @@
 {
   "name": "ebjs.extra",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Extra definitions for ebjs",
   "main": "main.js",
   "dependencies": {
